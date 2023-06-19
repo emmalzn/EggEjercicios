@@ -42,7 +42,7 @@ public class SopaDeLetras {
             
         }
 
-        // Rellenar los espacios no utilizados con números aleatorios del 0 al 9
+        // Rellenar los espacios no utilizados con números aleatorios
         for (int i = 0; i < 20; i++) {
             for (int j = 0; j < 20; j++) {
                 if (sopaDeLetras[i][j] == 0) {
@@ -55,9 +55,9 @@ public class SopaDeLetras {
         System.out.println("Sopa de Letras:");
         for (int i = 0; i < 20; i++) {
             for (int j = 0; j < 20; j++) {
-                System.out.print(sopaDeLetras[i][j] + " ");
+                System.out.print(sopaDeLetras[i][j] + " | ");
             }
-            System.out.println();
+            System.out.println("");
         }
 
     }
