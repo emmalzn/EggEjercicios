@@ -20,7 +20,8 @@ public class SopaDeLetras {
 
         System.out.println("Ingrese 5 palabras de mínimo 3 y máximo 5 caracteres:");
         String[] palabras = new String[5];
-
+        
+        // Ingresar las palabras y colocar condicional mínimo 3 y máximo 5 caracteres
         for (int i = 0; i < palabras.length; i++) {
             palabras[i] = scanner.nextLine();
             while (palabras[i].length() < 3 || palabras[i].length() > 5) {
@@ -28,14 +29,12 @@ public class SopaDeLetras {
                 palabras[i] = scanner.nextLine();
             }
         }
-
+        // Generar los números aleatorios donde se colocaran las palabras
         for (int i = 0; i < palabras.length; i++) {
             String palabra = palabras[i];
             int filaAleatoria = (int) (Math.random() * 20);
             int columnaInicial = (int) (Math.random() * (21 - palabra.length()));
-            System.out.println(filaAleatoria);
-            System.out.println(columnaInicial);
-            
+    
             for (int j = 0; j < palabra.length(); j++) {
                 sopaDeLetras[filaAleatoria][columnaInicial] = palabra.substring(j, j + 1).charAt(0);
                 columnaInicial ++; 
